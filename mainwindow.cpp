@@ -393,13 +393,14 @@ void MainWindow::on_actionOpen_triggered()
         {
             on_actionSave_All_triggered();
         }
-        ClearProject();
+        ClearProject(); //BAAAAD
         OpenProject(QFileDialog::getExistingDirectory());
+        ui->textEditMain->setDocument(dynamic_cast<PTreeTextItem*>(ui->treeWidget->itemAt(0, 0)));
     }
 }
 
 void MainWindow::on_actionStats_triggered()
 {
-    PStatsDialog* statsDialog = new PStatsDialog(ui->textEditMain->getItem(), QList<PTreeTextItem*>());
+    PStatsDialog* statsDialog = new PStatsDialog(ui->textEditMain->getItem(), PTreeTextItem::getItemList(ui->treeWidget));
     statsDialog->show();
 }

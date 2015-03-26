@@ -49,6 +49,7 @@ private:
     explicit PStatsDialog(QWidget *parent = 0);
     Ui::PStatsDialog *ui;
     bool bIsWord;
+    bool bIsBlock;
     QMap<QString, int> wordFreqMap;
 };
 

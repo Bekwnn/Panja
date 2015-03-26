@@ -18,7 +18,7 @@ public:
 
     QTextDocument* getDocument() { return document; }
     void saveItem(QDir projectDir);
-    static QList<PTreeTextItem*> getItemList(const QTreeWidget& tree);
+    static QList<PTreeTextItem*> getItemList(QTreeWidget *tree);
     QFileInfo lastSavedAs;
 private:
     QTextDocument* document;

@@ -51,7 +51,14 @@ void PTreeTextItem::saveItem(QDir projectDir)
     lastSavedAs = QFileInfo(fileName);
 }
 
-QList<PTreeTextItem*> PTreeTextItem::getItemList(const QTreeWidget& tree)
+QList<PTreeTextItem*> PTreeTextItem::getItemList(QTreeWidget* tree)
 {
-
+    QList<PTreeTextItem*> itemList;
+    QTreeWidgetItemIterator iter(tree);
+    while (*iter)
+    {
+        itemList.append(dynamic_cast<PTreeTextItem*>(*iter));
+        ++iter;
+    }
+    return itemList;
 }
