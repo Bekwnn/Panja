@@ -12,7 +12,8 @@ Project Heirarchy
 Fullscreen Mode
 ![Fullscreen Mode](http://a.pomf.se/upsdwg.png)
 
-Document Statistics and Word Count (coming soon)
+Document Statistics and Word Count
+![Word Count](http://a.pomf.se/kvmlja.png)
 
 Planned Features:
 
